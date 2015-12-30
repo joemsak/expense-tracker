@@ -1,0 +1,20 @@
+<%= form_for(@expense) do |f| %>
+  <div class='field'>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :made_on %>
+    <%= f.text_field :made_on, value: Date.today %>
+  </div>
+
+  <div class='actions'>
+    <%= f.submit 'Save expense' %>
+  </div>
+<% end %>

@@ -1,0 +1,8 @@
+<div class='expenses'>
+  <% @expenses.each do |expense| %>
+    <%= div_for expense do %>
+      <div class='expense_category'><%= expense.category %></div>
+      <div class='expense_amount'><%= number_to_currency expense.amount %></div>
+    <% end %>
+  <% end %>
+</div>
