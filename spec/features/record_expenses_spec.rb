@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'Recording expenses' do
   scenario "defaults to today's date" do
-    visit new_expense_path
+    visit root_path
+    click_link 'Add expense'
 
     fill_in 'Category', with: 'Food & Beverage'
     fill_in 'Amount', with: 15

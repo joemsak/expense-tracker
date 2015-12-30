@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'expenses/new'
+  root to: 'expenses#today'
 
   resources :expenses, only: [:new, :create] do
     get :today, on: :collection
